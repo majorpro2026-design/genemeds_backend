@@ -24,10 +24,11 @@ The API is available at `http://127.0.0.1:8000`. The liveness endpoint is
 
 ## Database and migrations
 
-Set `DATABASE_URL` in `.env`. Use the SQLAlchemy psycopg URL format:
+Set `DATABASE_URL` in the root `.env`, or fill in the individual database
+fields. For AWS RDS, `sslmode=require` is the expected default.
 
 ```text
-postgresql+psycopg://USER:PASSWORD@HOST:5432/DATABASE
+postgresql+psycopg://USER:PASSWORD@HOST:5432/DATABASE?sslmode=require
 ```
 
 Alembic is configured, but this scaffold deliberately contains no schema migration. Database
@@ -35,11 +36,9 @@ models and the initial migration require separate approval.
 
 ## Architecture
 
-- `app/api`: FastAPI routers and HTTP endpoints
-- `app/models`: SQLAlchemy models
-- `app/repositories`: database access
-- `app/services`: application and clinical workflow logic
-- `app/schemas`: API request and response schemas
+- `app/api`: shared FastAPI routers and HTTP endpoints
+- `app/authentication`: feature module with routes, service, repo, schemas, and models
+- `app/db`: SQLAlchemy base and async session handling
+- `app/core`: configuration and logging
 - `etl`: data parsing and loading, kept separate from API code
 - `alembic`: database migrations
-
