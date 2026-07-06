@@ -12,7 +12,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    app_name: str = "GeneRX API"
+    app_name: str = "GeneMeds"
     app_env: str = "development"
     app_debug: bool = False
     api_v1_prefix: str = "/api/v1"
