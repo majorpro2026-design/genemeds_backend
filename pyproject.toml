@@ -25,12 +25,19 @@ dev = [
     "ruff>=0.9,<1.0",
 ]
 etl = [
+<<<<<<< HEAD
     "httpx>=0.28,<1.0",
 ]
 
 [project.scripts]
 genemeds-etl = "etl.runner:main"
 
+=======
+    "openpyxl>=3.1,<4.0",
+    "pandas>=2.2,<3.0",
+]
+
+>>>>>>> 7eb62467f7ddba40d63bec4ba2a4f0e25bb3a894
 [tool.hatch.build.targets.wheel]
 packages = ["app", "etl"]
 
@@ -44,3 +51,7 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7eb62467f7ddba40d63bec4ba2a4f0e25bb3a894

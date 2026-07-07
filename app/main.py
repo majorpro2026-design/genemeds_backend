@@ -21,10 +21,17 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         debug=settings.app_debug,
         version="0.1.0",
+<<<<<<< HEAD
         lifespan=lifespan,
+=======
+>>>>>>> 7eb62467f7ddba40d63bec4ba2a4f0e25bb3a894
     )
     application.include_router(api_router, prefix=settings.api_v1_prefix)
     return application
 
 
 app = create_app()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7eb62467f7ddba40d63bec4ba2a4f0e25bb3a894
