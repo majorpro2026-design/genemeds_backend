@@ -1,0 +1,4 @@
+Database migrations belong in this directory.
+
+No migration is included in the initial scaffold because schema changes require approval.
+
