@@ -29,6 +29,9 @@ etl = [
     "pandas>=2.2,<3.0",
 ]
 
+[project.scripts]
+genemeds-etl = "etl.runner:main"
+
 [tool.hatch.build.targets.wheel]
 packages = ["app", "etl"]
 
@@ -42,4 +45,3 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
-

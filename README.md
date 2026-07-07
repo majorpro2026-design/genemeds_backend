@@ -34,6 +34,14 @@ postgresql+psycopg://USER:PASSWORD@HOST:5432/DATABASE?sslmode=require
 Alembic is configured, but this scaffold deliberately contains no schema migration. Database
 models and the initial migration require separate approval.
 
+## ETL
+
+After installing the ETL extras, run:
+
+```powershell
+python -m etl.runner
+```
+
 ## Architecture
 
 - `app/api`: shared FastAPI routers and HTTP endpoints

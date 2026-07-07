@@ -1,2 +1,2 @@
-"""Source-specific data parsers."""
+"""CPIC workbook parsers."""
 
